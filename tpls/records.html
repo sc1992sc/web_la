@@ -1,0 +1,18 @@
+<div class="c_title nmar">操作日志</div>
+<table class="custom_table" ng-controller="recordsCtrl">
+    <tr class="custom_th">
+        <th width="100">时间</th>
+        <th width="100">操作人</th>
+        <th width="300">内容</th>
+        <th width="100">IP</th>
+    </tr>
+    <tr class="blank">
+        <td colspan="4"></td>
+    </tr>
+    <tr ng-repeat="item in list">
+        <td width="100">{{item.time}}</td>
+        <td width="100">{{item.name}}</td>
+        <td width="300">{{item.content}}</td>
+        <td width="100">{{item.ip}}</td>
+    </tr>
+</table>

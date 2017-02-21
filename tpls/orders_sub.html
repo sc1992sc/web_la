@@ -1,0 +1,39 @@
+<div class="c_title nmar">待提交订单</div>
+<table class="order_table">
+    <tr>
+        <td width="169">订单号</td>
+        <td width="169">用户名称</td>
+        <td width="169">手机号码</td>
+        <td width="329">状态</td>
+    </tr>
+    <tr>
+        <td  width="507" colspan="3">客户地址</td>
+        <td width="329">操作</td>
+    </tr>
+</table>
+
+<table class="order_table order_list">
+    <tr>
+        <td width="169">120-dgrtjyjyj</td>
+        <td width="169" class="red">十里桃花</td>
+        <td width="169">123456677</td>
+        <td width="329">已量体</td>
+    </tr>
+    <tr>
+        <td width="507" colspan="3"><p>浙江省-杭州市-西湖区-创美华彩国际2幢20层</p></td>
+        <td width="329" align="right">
+            <a href="javascript:void(0)" class="btn btn_inline btn_ctrl" ng-click="todata(2,'content.orders.data')">查看</a>
+            <a ui-sref="content.orders.changedata" class="btn btn_inline btn_ctrl">修改</a>
+            <a ui-sref="content.orders.datainfo" class="btn btn_inline btn_ctrl">量体</a>
+        </td>
+    </tr>
+</table>
+
+<div class="pages">
+    <a href="javascript:void(0)" class="iconfont icon-pre"></a>
+    <a href="javascript:void(0)">1</a>
+    <a href="javascript:void(0)">2</a>
+    <a href="javascript:void(0)">3</a>
+    <a href="javascript:void(0)">4</a>
+    <a href="javascript:void(0)" class="iconfont icon-next"></a>
+</div>

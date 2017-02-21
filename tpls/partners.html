@@ -1,0 +1,39 @@
+<div class="c_title nmar">加盟商管理</div>
+<div ng-controller="partnerCtrl">
+    <div class="selectTool">
+        <a ui-sref="content.addpartner" class="btn btn_inline">新增加盟商</a>
+    </div>
+    <table class="custom_table" ng-controller="plistCtrl">
+        <tbody>
+        <tr class="custom_th">
+            <th width="80">加盟编号</th>
+            <th width="80">公司名称</th>
+            <th width="80">法人</th>
+            <th width="250">公司位置</th>
+            <th width="80">创建时间</th>
+            <th width="80">营业额</th>
+            <th width="80">目标额</th>
+            <th width="40">门店数量</th>
+            <th width="80">操作</th>
+        </tr>
+        <tr class="blank">
+            <td colspan="9"></td>
+        </tr>
+        <tr ng-repeat="item in list">
+            <td width="80">{{item.mid}}</td>
+            <td width="80">{{item.mname}}</td>
+            <td width="80">{{item.username}}</td>
+            <td width="250">{{item.address}}</td>
+            <td width="80">0</td>
+            <td width="80">0</td>
+            <td width="80">0</td>
+            <td width="40">{{item.number}}</td>
+            <td width="80">
+                <a href="orders_send.html">查看</a><br/>
+                <a href="orders_send.html">修改</a><br/>
+                <a href="javascript:void(0)" ng-click="del(item.mid,$index)">删除</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

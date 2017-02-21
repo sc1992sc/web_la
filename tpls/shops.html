@@ -1,0 +1,41 @@
+<div class="c_title nmar">门店管理</div>
+<div ng-controller="shopCtrl">
+    <div class="selectTool">
+        <a ui-sref="content.addshop" class="btn btn_inline">新增门店</a>
+    </div>
+    <div ng-controller="plistCtrl">
+        <table class="custom_table">
+            <tbody>
+            <tr class="custom_th">
+                <th width="80">门店编号</th>
+                <th width="80">门店名称</th>
+                <th width="80">店长姓名</th>
+                <th width="250">门店位置</th>
+                <th width="80">创建时间</th>
+                <th width="80">营业额</th>
+                <th width="80">目标额</th>
+                <th width="40">导购数量</th>
+                <th width="80">操作</th>
+            </tr>
+            <tr class="blank">
+                <td colspan="9"></td>
+            </tr>
+            <tr ng-repeat="item in list">
+                <td width="80">{{item.mid}}</td>
+                <td width="80">{{item.mname}}</td>
+                <td width="80">{{item.username}}</td>
+                <td width="250">{{item.address}}</td>
+                <td width="80">0</td>
+                <td width="80">0</td>
+                <td width="80">0</td>
+                <td width="40">{{item.number}}</td>
+                <td width="80">
+                    <a href="orders_send.html">查看</a><br/>
+                    <a href="orders_send.html">修改</a><br/>
+                    <a href="javascript:void(0)" ng-click="del(item.mid,$index)">删除</a>
+                </td>
+            </tr>
+            </tbody></table>
+    </div>
+</div>
+

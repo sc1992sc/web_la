@@ -1,0 +1,22 @@
+<div class="c_title nmar">加盟商管理</div>
+<div ng-controller="addpartner">
+    <div class="f_group">
+        <span class="f_label">公司名称： </span>
+        <input type="text" ng-model="partner_name"/>
+    </div>
+    <div class="f_group">
+        <span class="f_label">法人： </span>
+        <input type="text" ng-model="partner_person"/>
+    </div>
+    <div class="f_group">
+        <span class="f_label">客户地址： </span>
+        <select id="s_province" name="s_province" ng-model="partner_address_1"></select>  
+        <select id="s_city" name="s_city" ng-model="partner_address_2"></select>  
+        <select id="s_county" name="s_county" ng-model="partner_address_3"></select>
+    </div>
+    <div class="f_group">
+        <span class="f_label">门店数量： </span>
+        <input type="text" ng-model="partner_shopnum"/>
+    </div>
+    <a class="btn btn_sub bpos" href="javascript:void(0)" ng-click="save('content.partners')">保存</a>
+</div>

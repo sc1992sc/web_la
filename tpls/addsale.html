@@ -1,0 +1,18 @@
+<div class="c_title">导购员管理</div>
+<form ng-controller="addsaleCtrl">
+    <div class="f_group">
+        <span class="f_label">姓名： </span>
+        <input type="text" placeholder="导购员姓名" ng-model="username"/>
+    </div>
+    <div class="f_group">
+        <span class="f_label">手机号： </span>
+        <input type="text" placeholder="导购员手机号" ng-model="userphone"/>
+    </div>
+    <div class="f_group">
+        <span class="f_label">状态： </span>
+        <select style="width: 95px" ng-model="status" ng-init="status='1'">
+            <option ng-repeat="item in sites" value="{{item.status}}">{{item.name}}</option>
+        </select>
+    </div>
+    <a class="btn btn_sub bpos" href="javascript:void(0)" ng-click="save()">保存</a>
+</form>

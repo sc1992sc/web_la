@@ -1,0 +1,22 @@
+<div class="c_title nmar">角色管理</div>
+<div class="selectTool">
+    <a ui-sref="content.roleDetail" class="btn btn_inline">新增角色</a>
+</div>
+<table class="custom_table" ng-controller="roleCtrl">
+    <tr class="custom_th">
+        <th width="100">角色名</th>
+        <th width="200">描述</th>
+        <th width="100">操作</th>
+    </tr>
+    <tr class="blank">
+        <td colspan="4"></td>
+    </tr>
+    <tr ng-repeat="item in list">
+        <td width="100">{{item.rolename}}</td>
+        <td width="200">{{item.describe}}</td>
+        <td width="100">
+            <a href="javascript:void(0)" ng-click="torole(item.id)">编辑</a>&nbsp;&nbsp;
+            <a href="javascript:void(0)" ng-click="del(item.id,$index)">删除</a>
+        </td>
+    </tr>
+</table>

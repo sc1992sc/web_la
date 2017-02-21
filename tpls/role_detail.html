@@ -1,0 +1,165 @@
+<div class="c_title nmar">角色管理</div>
+
+<div ng-controller="addroleCtrl">
+    <div class="f_group">
+        <span class="f_label">角色名： </span>
+        <input type="text" ng-model="rolename" ng-init="rolename=obj.rolename"/>
+    </div>
+    <div class="f_group" style="height:auto">
+        <span class="f_label" ng-model="roledes">角色描述： </span>
+        <textarea ng-model="roledes" ng-init="roledes=obj.describe"></textarea>
+    </div>
+
+    <div class="rolecnt">
+        <span class="f_label">权限管理： </span>
+        <table>
+            <tr>
+                <td width="200">
+                    <input type="checkbox"/>
+                    <span class="role_til">导购员管理 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>列表 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>增加 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>修改 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>删除 </span>
+                </td>
+            </tr>
+            <tr>
+                <td width="200">
+                    <input type="checkbox"/>
+                    <span class="role_til">订单管理 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>列表 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>编辑订单状态</span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>修改 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>查看发货 </span>
+                </td>
+            </tr>
+            <tr>
+                <td width="200">
+                    <input type="checkbox"/>
+                    <span class="role_til">客户管理 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>列表 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>增加 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>修改 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>删除 </span>
+                </td>
+            </tr>
+            <tr>
+                <td width="200">
+                    <input type="checkbox"/>
+                    <span class="role_til">加盟商管理 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>列表 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>增加 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>修改 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>删除 </span>
+                </td>
+            </tr>
+            <tr>
+                <td width="200">
+                    <input type="checkbox"/>
+                    <span class="role_til">门店管理 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>列表 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>增加 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>修改 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>删除 </span>
+                </td>
+            </tr>
+            <tr>
+                <td width="200">
+                    <input type="checkbox"/>
+                    <span class="role_til">统计分析 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>销量 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>利润 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>加盟商 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>门店 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>导购 </span>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                    <span>客户 </span>
+                </td>
+            </tr>
+            <tr>
+                <td width="200">
+                    <input type="checkbox"/>
+                    <span class="role_til">操作日志</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <a class="btn btn_sub bpos" href="javascript:void(0)" ng-click="save()">保存</a>
+</div>

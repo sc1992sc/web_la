@@ -1,0 +1,55 @@
+<div class="c_title nmar">客户管理</div>
+<div ng-controller="customCtrl">
+    <div class="selectTool">
+        <input type="text" placeholder="天数"/>
+        <select>
+            <option value="--快速查询--">--快速查询--</option>
+            <option value="--未购物用户--">未购物用户</option>
+            <option value="--已购物用户--">已购物用户--</option>
+            <option value="--新注册用户--">新注册用户--</option>
+        </select>
+        <a class="btn btn_inline" href="javascript:void(0)">查询</a>
+        <a class="btn btn_inline" href="javascript:void(0)" id="ml">更多条件</a>
+        <a ui-sref="content.addcustom" class="btn btn_inline">新增客户</a>
+    </div>
+
+    <table class="custom_table">
+        <tr class="custom_th">
+            <th>客户编号</th>
+            <th>客户姓名</th>
+            <th>手机号码</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>定制次数</th>
+            <th>量体数据数量</th>
+            <th>操作</th>
+        </tr>
+        <tr class="blank">
+            <td colspan="7"></td>
+        </tr>
+        <tr ng-repeat="item in list">
+            <td>{{item.uid}}</td>
+            <td>{{item.realname}}</td>
+            <td>{{item.phone}}</td>
+            <td>
+                <span ng-if="item.sex==0">女</span>
+                <span ng-if="item.sex==1">男</span>
+            </td>
+            <td>{{item.age}}</td>
+            <td>0</td>
+            <td>0</td>
+            <td class="edit">
+                <a ui-sref="content.orders.orders_send">预约单列表</a>
+            </td>
+        </tr>
+    </table>
+
+    <div class="pages">
+        <a href="javascript:void(0)" class="iconfont icon-pre"></a>
+        <a href="javascript:void(0)">1</a>
+        <a href="javascript:void(0)">2</a>
+        <a href="javascript:void(0)">3</a>
+        <a href="javascript:void(0)">4</a>
+        <a href="javascript:void(0)" class="iconfont icon-next"></a>
+    </div>
+</div>

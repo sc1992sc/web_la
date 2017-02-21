@@ -1,0 +1,73 @@
+<!--面料选择模块-->
+<div ng-controller="mlmoduleCtrl" >
+<div class="allml" ng-class="{true: 'active'}[isActive]">
+    <div class="allml_input">
+        <input type="text"/>
+        <a href="javascript:void(0)">确定</a>
+    </div>
+    <div class="allml_nav tabs">
+        <a href="javascript:void(0)" class="active" tab>80支棉</a>
+        <a href="javascript:void(0)" tab>100支棉</a>
+        <a href="javascript:void(0)" tab>棉真丝</a>
+        <a href="javascript:void(0)" tab>棉弹力</a>
+    </div>
+    <div class="ml_lists">
+        <div class="ml_list tabCon">
+            <ul>
+                <li>
+                    <img src="images/ml.png" alt=""/>
+                    <p>123-sdsf</p>
+                </li>
+                <li>
+                    <img src="images/ml.png" alt=""/>
+                    <p>123-sdsf</p>
+                </li>
+                <li>
+                    <img src="images/ml.png" alt=""/>
+                    <p>123-sdsf</p>
+                </li>
+                <li>
+                    <img src="images/ml.png" alt=""/>
+                    <p>123-sdsf</p>
+                </li>
+                <li>
+                    <img src="images/ml.png" alt=""/>
+                    <p>123-sdsf</p>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="ml_list tabCon">
+            <ul>
+                <li>
+                    <img src="images/ml.png" alt=""/>
+                    <p>123-sdsf</p>
+                </li>
+            </ul>
+        </div>
+        <div class="ml_list tabCon">
+            <ul>
+                <li>
+                    <img src="images/ml.png" alt=""/>
+                    <p>123-sdsf</p>
+                </li>
+            </ul>
+        </div>
+        <div class="ml_list tabCon">
+            <ul>
+                <li>
+                    <img src="images/ml.png" alt=""/>
+                    <p>123-sdsf</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="cover pennel" ng-show="showcover" ng-click="penneloff()"></div>
+</div>
+<script>
+    function step(index){
+        $(".data_c_item").eq(index).fadeIn().siblings().hide()
+        $(".data_nav a").eq(index).addClass("active").siblings().removeClass("active")
+    }
+</script>

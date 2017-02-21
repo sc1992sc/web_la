@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/plung/jquery.validate.min.js"></script>
+    <script src="js/plung/messages_zh.js"></script>
+    <script src="jsrsa/base64.js"></script>
+    <script src="jsrsa/jsencrypt.min.js"></script>
+    <script src="jsrsa/rsajs.js"></script>
+</head>
+<body>
+<script>
+    var web='http://dzadmin.dsnic.com/home/index/login';
+    //前端表单格式验证
+    $().ready(function() {
+        $("#myForm").validate({
+            debug:true,
+            messages: {
+                user_name: {
+                    required: "请输入账号"
+                },
+                user_password: {
+                    required: "请输入密码",
+                    minlength: "密码长度不能小于 6 个字母"
+                }
+            },
+            submitHandler:function(){
+                console.log("提交事件!");
+                var name= $("#userName").val();
+                var passval= $("#userPass").val();
+                var code='username='+name+'&password='+passval;
+                var code2= rsajm(code);
+                code2=base64encode(utf16to8(code2));
+
+                $.ajax({
+                    type: "get",
+                    url: web,
+                    data:'sign='+code2,
+                    dataType:"jsonp",
+                    success: function(result){
+                        if(result.status=='200'){
+                            window.location='app.html'
+                        }else{
+                            alert("用户名或密码错误")
+                        }
+                    }
+                })
+            }
+        });
+    });
+</script>
+
+
+<div class="loginbg">
+    <img src="images/bg.jpg" alt="" class="bgimg"/>
+    <div class="infobox">
+        <form name="myForm" method="post" id="myForm">
+            <div class="group">
+                <span class="group_lab iconfont icon-iconuser"></span>
+                <input type="text" placeholder="账号" required name="user_name" id="userName" />
+            </div>
+            <div class="group">
+                <span class="group_lab iconfont icon-iconfontcolor11"></span>
+                <input type="password" placeholder="密码" name="user_password" required minlength="6" id="userPass" />
+            </div>
+            <input type="submit" value="登录" class="btn btn_sigin"/>
+        </form>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

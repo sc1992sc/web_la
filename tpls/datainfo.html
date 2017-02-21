@@ -1,0 +1,412 @@
+<div class="c_title">量体数据</div>
+<div class="baseinfo">
+    <span>预约单号:<samp> SJCY-16061910002</samp></span>
+    <span>预约人:<samp> 十里桃花</samp> </span>
+    <span>电话: <samp>13566792146</samp></span>
+</div>
+<div class="data_nav tabs">
+    <a href="javascript:void(0)" class="active" tab>款式搭配</a>
+    <a href="javascript:void(0)" tab>量体数据</a>
+    <a href="javascript:void(0)" tab>特体数据(非必填)</a>
+    <a href="javascript:void(0)" tab>刺绣内容</a>
+    <a href="javascript:void(0)" tab>客户信息</a>
+</div>
+<div class="data_content">
+<!--------------------------------------------款式搭配——————————————————--->
+<div class="data_c_item tabCon">
+    <div class="choose">
+        <span class="choose_name">衬衫规格：</span>
+        <dl class="dl_text">
+            <dd class="active" addactive>长袖</dd>
+            <dd addactive>短袖</dd>
+            <dd addactive>七分袖</dd>
+        </dl>
+    </div>
+    <div class="choose" ng-controller="choosemlCtrl">
+        <span class="choose_name">衬衫面料：</span>
+        <div class="choose_ml">
+            <span>YDP-PC20220</span>
+            <span>100支棉</span>
+            <img src="images/ml.png" alt=""/>
+            <a href="javascript:void(0)" class="btn btn_inline btn_sub" ng-click="pennelon()">选择面料</a>
+        </div>
+    </div>
+    <div class="choose">
+        <span class="choose_name">领型选择：</span>
+        <dl class="dl_img">
+            <dd class="active" addactive>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>标准领</p>
+            </dd>
+            <dd addactive>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>温莎领</p>
+            </dd>
+            <dd addactive>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>领尖扣</p>
+            </dd>
+            <dd addactive>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>小方领</p>
+            </dd>
+        </dl>
+    </div>
+    <div class="choose">
+        <span class="choose_name">袖型选择：</span>
+        <dl class="dl_img">
+            <dd class="active" addactive>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>标准领</p>
+            </dd>
+            <dd addactive>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>温莎领</p>
+            </dd>
+            <dd addactive>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>领尖扣</p>
+            </dd>
+            <dd addactive>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>小方领</p>
+            </dd>
+        </dl>
+    </div>
+    <div class="choose">
+        <span class="choose_name">门禁选择：</span>
+        <dl class="dl_img">
+            <dd class="active" addactive>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>标准领</p>
+            </dd>
+            <dd addactive>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>温莎领</p>
+            </dd>
+            <dd addactive>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>领尖扣</p>
+            </dd>
+            <dd addactive>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>小方领</p>
+            </dd>
+        </dl>
+    </div>
+    <div class="choose">
+        <span class="choose_name">收身选择：</span>
+        <dl class="dl_img">
+            <dd class="active" addactive>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>标准领</p>
+            </dd>
+            <dd addactive>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>温莎领</p>
+            </dd>
+            <dd addactive>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>领尖扣</p>
+            </dd>
+            <dd addactive>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>小方领</p>
+            </dd>
+        </dl>
+    </div>
+    <div class="choose">
+        <span class="choose_name">领口颜色：</span>
+        <dl class="dl_text">
+            <dd class="active" addactive>同身</dd>
+            <dd addactive>白色撞袖领</dd>
+        </dl>
+    </div>
+    <div class="choose">
+        <span class="choose_name">口袋选择：</span>
+        <dl class="dl_text">
+            <dd class="active" addactive>无口袋</dd>
+            <dd addactive>有口袋</dd>
+        </dl>
+    </div>
+    <div class="choose">
+        <span class="choose_name">纽扣选择：</span>
+        <dl class="dl_text">
+            <dd class="active" addactive>普通纽扣</dd>
+            <dd addactive>贝壳纽扣</dd>
+        </dl>
+    </div>
+    <a class="btn btn_sub" href="javascript:void(0)" onclick="step(1)">下一步</a>
+</div>
+<!--------------------------------------------量体数据——————————————————--->
+<div class="data_c_item tabCon" ng-controller="datainfoCtrl">
+    <div class="item-tab tab-input item-tab-fl">
+        <span clas="span_left">领围测量:</span>
+        <div class="case">
+            <input type="text"   ng-model="lw" class="param_26" min_val="30.00" max_val="60.00" style="width:80px;">
+            <a>范围: 30.00-60.00</a>
+        </div>
+    </div>
+    <div class="item-tab tab-input item-tab-fl">
+        <span class="span_right" style="color:#432890;">领围成衣:</span>
+        <div class="case">
+            <input type="text"   ng-model="lwcy" class="param_26_zoom" min_val="30.00" max_val="60.00" style="width:80px;">
+            <a>&nbsp;</a>
+        </div>
+    </div>
+
+    <div class="item-tab tab-input item-tab-fl">
+        <span clas="span_left">胸围测量:</span>
+        <div class="case">
+            <input type="text" ng-model="xw" class="param_27" min_val="60.00" max_val="180.00" style="width:80px;">
+            <a>范围: 60.00-180.00</a>
+        </div>
+    </div>
+    <div class="item-tab tab-input item-tab-fl">
+        <span class="span_right" style="color:#432890;">胸围成衣:</span>
+        <div class="case">
+            <input type="text" ng-model="xwcy" class="param_27_zoom" min_val="60.00" max_val="180.00" style="width:80px;">
+            <a>&nbsp;</a>
+        </div>
+    </div>
+
+    <div class="item-tab tab-input item-tab-fl">
+        <span clas="span_left">腰围测量:</span>
+        <div class="case">
+            <input type="text" ng-model="yw" class="param_28" min_val="50.00" max_val="170.00" style="width:80px;">
+            <a>范围: 50.00-170.00</a>
+        </div>
+    </div>
+    <div class="item-tab tab-input item-tab-fl">
+        <span class="span_right" style="color:#432890;">腰围成衣:</span>
+        <div class="case">
+            <input type="text" ng-model="ywcy" class="param_28_zoom" min_val="50.00" max_val="170.00" style="width:80px;">
+            <a>&nbsp;</a>
+        </div>
+    </div>
+
+    <div class="item-tab tab-input item-tab-fl">
+        <span clas="span_left">臀围测量:</span>
+        <div class="case">
+            <input type="text" ng-model="tw" class="param_29" min_val="50.00" max_val="170.00" style="width:80px;">
+            <a>范围: 50.00-170.00</a>
+        </div>
+    </div>
+    <div class="item-tab tab-input item-tab-fl">
+        <span class="span_right" style="color:#432890;">臀围成衣:</span>
+        <div class="case">
+            <input type="text" ng-model="twcy" class="param_29_zoom" min_val="50.00" max_val="170.00" style="width:80px;">
+            <a>&nbsp;</a>
+        </div>
+    </div>
+
+    <div class="item-tab tab-input item-tab-fl">
+        <span clas="span_left">肩宽测量:</span>
+        <div class="case">
+            <input type="text" ng-model="jw" class="param_30" min_val="35.00" max_val="70.00" style="width:80px;">
+            <a>范围: 35.00-70.00</a>
+        </div>
+    </div>
+    <div class="item-tab tab-input item-tab-fl">
+        <span class="span_right" style="color:#432890;">肩宽成衣:</span>
+        <div class="case">
+            <input type="text" ng-model="jwcy" class="param_30_zoom" min_val="35.00" max_val="70.00" style="width:80px;">
+            <a>&nbsp;</a>
+        </div>
+    </div>
+
+    <div class="item-tab tab-input item-tab-fl">
+        <span clas="span_left">衣长测量:</span>
+        <div class="case">
+            <input type="text" ng-model="yc" class="param_31" min_val="50.00" max_val="90.00" style="width:80px;">
+            <a>范围: 50.00-90.00</a>
+        </div>
+    </div>
+    <div class="item-tab tab-input item-tab-fl">
+        <span class="span_right" style="color:#432890;">衣长成衣:</span>
+        <div class="case">
+            <input type="text" ng-model="yccy" class="param_31_zoom" min_val="50.00" max_val="90.00" style="width:80px;">
+            <a>&nbsp;</a>
+        </div>
+    </div>
+
+    <div class="item-tab tab-input item-tab-fl">
+        <span clas="span_left">袖长测量:</span>
+        <div class="case">
+            <input type="text" ng-model="xc" class="param_32" min_val="15.00" max_val="80.00" style="width:80px;">
+            <a>范围: 15.00-80.00</a>
+        </div>
+    </div>
+    <div class="item-tab tab-input item-tab-fl">
+        <span class="span_right" style="color:#432890;">袖长成衣:</span>
+        <div class="case">
+            <input type="text" ng-model="xccy" class="param_32_zoom" min_val="15.00" max_val="80.00" style="width:80px;">
+            <a>&nbsp;</a>
+        </div>
+    </div>
+
+    <div class="item-tab tab-input item-tab-fl">
+        <span clas="span_left">臂围测量:</span>
+        <div class="case">
+            <input type="text" ng-model="bw" class="param_33" min_val="20.00" max_val="65.00" style="width:80px;">
+            <a>范围: 20.00-65.00</a>
+        </div>
+    </div>
+    <div class="item-tab tab-input item-tab-fl">
+        <span class="span_right" style="color:#432890;">臂围成衣:</span>
+        <div class="case">
+            <input type="text" ng-model="bwcy" class="param_33_zoom" min_val="20.00" max_val="65.00" style="width:80px;">
+            <a>&nbsp;</a>
+        </div>
+    </div>
+
+    <div class="item-tab tab-input item-tab-fl">
+        <span clas="span_left">腕围测量:</span>
+        <div class="case">
+            <input type="text" ng-model="ww" class="param_34" min_val="15.00" max_val="30.00" style="width:80px;">
+            <a>范围: 15.00-30.00</a>
+        </div>
+    </div>
+    <div class="item-tab tab-input item-tab-fl">
+        <span class="span_right" style="color:#3466CC;">腕围成衣:</span>
+        <div class="case">
+            <input type="text" ng-model="wwcy" class="param_34_zoom" min_val="15.00" max_val="30.00" style="width:80px;">
+            <a>&nbsp;</a>
+        </div>
+    </div>
+
+    <div class="item-tab tabtn-full">
+        <div class="stepbtn">
+            <a class="btn btn_inline" href="javascript:void(0)" onclick="step(0)">上一步</a>
+            <a class="btn btn_inline" href="javascript:void(0)">查看建议放码尺寸</a>
+            <a class="btn btn_inline" href="javascript:void(0)" onclick="step(2)" ng-click="savedata()">下一步</a>
+        </div>
+    </div>
+</div>
+<!--------------------------------------------特体数据——————————————————--->
+<div class="data_c_item tabCon">
+    <div class="tip">
+        特体数据为非必填项，轻微特体不用填写，不需要每一处都填写！<br/>
+        明显特殊体型只需填写相应的特体位置，其它地方可以为空！
+    </div>
+    <div class="choose">
+        <span class="choose_name">体型：</span>
+        <dl class="dl_text">
+            <dd class="active">正常体型</dd>
+            <dd>特殊体型</dd>
+        </dl>
+    </div>
+    <div class="item-tab tab-input item-tab-fl">
+        <span>前胸宽数据：</span>
+        <div class="case">
+            <input type="text" placeholder="" class="param_26" min_val="30.00" max_val="60.00" style="width:80px;">
+            <a>范围: 30.00-60.00</a>
+        </div>
+    </div>
+    <div class="item-tab tab-input item-tab-fl">
+        <span>后背宽数据：</span>
+        <div class="case">
+            <input type="text" placeholder="" class="param_26" min_val="30.00" max_val="60.00" style="width:80px;">
+            <a>范围: 30.00-60.00</a>
+        </div>
+    </div>
+    <div class="item-tab tab-input item-tab-fl">
+        <span>中臂围数据：</span>
+        <div class="case">
+            <input type="text" placeholder="" class="param_26" min_val="30.00" max_val="60.00" style="width:80px;">
+            <a>范围: 30.00-60.00</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="choose">
+        <span class="choose_name">肩斜量：</span>
+        <dl class="dl_img">
+            <dd class="active">
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>正常</p>
+            </dd>
+            <dd>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>平肩</p>
+            </dd>
+            <dd>
+                <div class="dimg"><img src="images/p1.png" alt=""/></div>
+                <p>溜肩</p>
+            </dd>
+        </dl>
+    </div>
+    <div class="choose">
+        <span class="choose_name">腹部量：</span>
+        <dl class="dl_text">
+            <dd class="active">正常</dd>
+            <dd>有小肚</dd>
+            <dd>大肚</dd>
+        </dl>
+    </div>
+    <div class="choose">
+        <span class="choose_name">脖子：</span>
+        <dl class="dl_text">
+            <dd class="active">正常</dd>
+            <dd>短脖</dd>
+        </dl>
+    </div>
+    <div class="choose">
+        <span class="choose_name">背部：</span>
+        <dl class="dl_text">
+            <dd class="active">正常</dd>
+            <dd>驼背</dd>
+        </dl>
+    </div>
+    <div class="item-tab tabtn-full">
+        <div class="stepbtn">
+            <a class="btn btn_inline" href="javascript:void(0)" onclick="step(1)">上一步</a>
+            <a class="btn btn_inline" href="javascript:void(0)" onclick="step(3)">下一步</a>
+        </div>
+    </div>
+</div>
+<!--------------------------------------------刺绣内容——————————————————--->
+<div class="data_c_item tabCon">
+    <div class="item-tab tab-input item-tab-fl">
+        <span>个性刺绣：</span>
+        <div class="case">
+            <input type="text" placeholder="" class="param_26" min_val="30.00" max_val="60.00" style="width:212px;">
+            <a>客户刺绣文字</a>
+        </div>
+    </div>
+    <div class="item-tab tabtn-full">
+        <div class="stepbtn">
+            <a class="btn btn_inline" href="javascript:void(0)" onclick="step(2)">上一步</a>
+            <a class="btn btn_inline" href="javascript:void(0)" onclick="step(4)">下一步</a>
+        </div>
+    </div>
+</div>
+<!--------------------------------------------客户信息——————————————————--->
+<div class="data_c_item tabCon">
+    <div class="choose">
+        <span class="choose_name">年龄：</span>
+        <input type="text"/>
+    </div>
+    <div class="choose">
+        <span class="choose_name">身高：</span>
+        <input type="text"/>
+    </div>
+    <div class="choose">
+        <span class="choose_name">体重：</span>
+        <input type="text"/>
+    </div>
+    <div class="choose">
+        <span class="choose_name">邮寄地址：</span>
+        <input type="text"/>
+    </div>
+    <div class="choose">
+        <span class="choose_name">备注：</span>
+        <input type="text"/>
+    </div>
+    <div class="item-tab tabtn-full">
+        <div class="stepbtn">
+            <a class="btn btn_inline" href="javascript:void(0)" onclick="step(3)">上一步</a>
+            <a class="btn btn_inline" href="javascript:void(0)">保存量体数据</a>
+        </div>
+    </div>
+</div>
+</div>
